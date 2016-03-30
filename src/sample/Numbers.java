@@ -8,15 +8,23 @@ import java.util.NoSuchElementException;
 
 /**
  * Created by Emanuele on 30/03/2016.
+ * It implements Iterable for use generic for
  */
 public class Numbers implements Iterable<Integer> {
 
     private ArrayList<Integer> myList;
 
+    /**
+     * Default Constructor.Initializes the ArrayList
+     */
     public Numbers(){
         myList = new ArrayList<>();
     }
 
+    /**
+     * This method allows you to insert num in the arrayList
+    @param num is the number to insert into the ArrayList
+     */
     public void AddNum(int num){
         myList.add(num);
     }
@@ -33,17 +41,22 @@ public class Numbers implements Iterable<Integer> {
         numbers.AddNum(56);
         numbers.AddNum(65);
         numbers.AddNum(-96);
-
         for (int n:numbers) {
             System.out.println("Ecco: "+n +"\n");
         }
     }
 
     @Override
+    /**
+     * Returns an Iterator for iterate the array from Min value to Max value
+     */
     public Iterator<Integer> iterator() {
         return new MinToMax(myList);
     }
 
+    /**
+     * Custom iterator for iterate a list of integer
+     */
     public static class MinToMax implements Iterator<Integer>{
 
         private int visited;
