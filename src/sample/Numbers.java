@@ -115,10 +115,14 @@ public class Numbers implements Iterable<Integer> {
     public static class MaxToMin implements Iterator<Integer>{
         private ArrayList<Integer> myList;
         private int visited;
-
+        /**
+         * Constructor
+         * @param myList list to iterate
+         */
         public MaxToMin(ArrayList<Integer> myList){
             this.myList = myList;
             this.myList.sort(new CustomComparator());
+            //Reverse the list
             Collections.reverse(myList);
 
         }
