@@ -1,7 +1,7 @@
 package Arcari.Leonardo.SortAlgorithms;
 
 /**
- * Created by leonardoarcari on 22/03/16.
+ * Simple class describing a Person implementing Comparable interface.
  */
 public class Persona implements Comparable<Persona> {
     private String name;

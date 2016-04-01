@@ -1,7 +1,7 @@
 package Arcari.Leonardo.SortAlgorithms;
 
 /**
- * Created by leonardoarcari on 22/03/16.
+ * Simple class describing a Student.
  */
 public class Student extends Persona {
     private String id;
@@ -16,6 +16,13 @@ public class Student extends Persona {
         return (super.toString() + ", id n. " + id);
     }
 
+    /**
+     * Student extends Persona which implements Comparable<Persona>. Hence, compareTo()
+     * overridden method still takes a Persona parameter casting to Student in case it's an instance of Student.
+     *
+     * @param o Student to compare with
+     * @return 0 if a.equals(b), 1 if a > b, -1 otherwise.
+     */
     @Override
     public int compareTo(Persona o) {
         int i = super.compareTo(o);

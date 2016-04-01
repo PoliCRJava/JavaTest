@@ -1,7 +1,7 @@
 package Arcari.Leonardo.SortAlgorithms;
 
 /**
- * Created by leonardoarcari on 22/03/16.
+ * Test class
  */
 public class SortAlgDriver {
     public static void main(String[] args) {
