@@ -1,4 +1,4 @@
-package sample;
+package Iterators;
 
 import java.util.*;
 

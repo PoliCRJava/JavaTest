@@ -1,6 +1,5 @@
-package sample;
+package Iterators;
 
-import java.util.Collection;
 import java.util.List;
 
 /**

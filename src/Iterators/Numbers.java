@@ -1,6 +1,4 @@
-package sample;
-
-import com.sun.istack.internal.NotNull;
+package Iterators;
 
 import java.util.ArrayList;
 import java.util.Collections;
