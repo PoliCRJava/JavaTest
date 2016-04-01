@@ -6,4 +6,6 @@ You can contribute and some of your test about something.
 
 Let's Code!
 
+You have not to add .idea files to this repo. Add only file in src folder and lib
+
 
