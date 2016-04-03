@@ -8,6 +8,11 @@ public class ActionableObject implements Actionable {
     private int number;
     private int count;
 
+    /**
+     * Default constructor
+     * @param count the object counts while count
+     * @param number the order of the object
+     */
     public ActionableObject(int count, int number){
         this.count = count;
         this.number = number;
