@@ -48,15 +48,18 @@ public class Monitor implements Observer {
                 Coordinata c = new Coordinata(i, k);
                 Nave nave = partita.naveInCoordinata(c, partita.getUltimoGiocatore());
                 System.out.print(nave.mostraStato(c));
-            } System.out.println();
-        } System.out.println(trattiniFondoGriglia);
+            }
+            System.out.println();
+        }
+        System.out.println(trattiniFondoGriglia);
     }
 
     private String creaTrattiniGriglia(int n_trattini) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n_trattini; i++) {
             sb.append("-");
-        } return sb.toString();
+        }
+        return sb.toString();
     }
 
 

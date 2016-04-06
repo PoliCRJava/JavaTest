@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by leonardoarcari on 06/04/16.
  */
-public class Partita implements Subject{
+public class Partita implements Subject {
     private Griglia[] g = new Griglia[2];
     private List<Observer> observers;
 
@@ -36,7 +36,7 @@ public class Partita implements Subject{
         setUltimoEvento(esitoMossa, i);
 
         if (esitoMossa == EventiGioco.AFFONDATO) {
-            if (g[i-1].sconfitta()) {
+            if (g[i - 1].sconfitta()) {
                 setUltimoEvento(EventiGioco.SCONFITTA, i);
                 return false;
             }
@@ -45,7 +45,7 @@ public class Partita implements Subject{
     }
 
     private void setUltimoEvento(EventiGioco evento, int giocatore) {
-        ultimoEvento[giocatore-1] = evento;
+        ultimoEvento[giocatore - 1] = evento;
         ultimoGiocatore = giocatore;
         notifyObservers();
     }
@@ -69,7 +69,7 @@ public class Partita implements Subject{
 
     public Nave naveInCoordinata(Coordinata c, int giocatore) {
         if (c.x < Costanti.DIM && c.y < Costanti.DIM) {
-            return g[giocatore-1].g[c.x][c.y];
+            return g[giocatore - 1].g[c.x][c.y];
         } else throw new IndexOutOfBoundsException();
     }
 
@@ -78,6 +78,6 @@ public class Partita implements Subject{
     }
 
     public EventiGioco getUltimoEvento(int giocatore) {
-        return ultimoEvento[giocatore-1];
+        return ultimoEvento[giocatore - 1];
     }
 }

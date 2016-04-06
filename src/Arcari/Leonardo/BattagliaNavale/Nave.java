@@ -5,6 +5,8 @@ package Arcari.Leonardo.BattagliaNavale;
  */
 public interface Nave {
     boolean colpo(Coordinata c);
+
     String mostraStato(Coordinata c);
+
     boolean affondata();
 }

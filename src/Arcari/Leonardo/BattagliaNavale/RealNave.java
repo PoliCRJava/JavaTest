@@ -20,7 +20,8 @@ public class RealNave implements Nave {
                 this.colpita[k] = true;
                 return true;
             }
-        } return false;
+        }
+        return false;
     }
 
     @Override
@@ -29,7 +30,8 @@ public class RealNave implements Nave {
             Coordinata tc = pn.calcolaCoordinataOccupata(k);
             if (tc.x == c.x && tc.y == c.y && colpita[k])
                 return " X ";
-        } return " " + pn.dimensioneNave + " ";
+        }
+        return " " + pn.dimensioneNave + " ";
     }
 
     @Override
@@ -37,7 +39,8 @@ public class RealNave implements Nave {
         for (int k = 0; k < pn.dimensioneNave; k++) {
             if (!colpita[k])
                 return false;
-        } return true;
+        }
+        return true;
     }
 
     public PosizioneNave getPn() {

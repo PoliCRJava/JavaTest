@@ -43,7 +43,8 @@ public class Griglia {
             if (tc.x < 0 || tc.x >= Costanti.DIM
                     || tc.y < 0 || tc.y >= Costanti.DIM || g[tc.x][tc.y] != null)
                 return false;
-        } return true;
+        }
+        return true;
     }
 
     private void posaNave(RealNave nave) {
@@ -67,7 +68,8 @@ public class Griglia {
     public String mostraStatoCoordinata(Coordinata c) {
         if (c.x < Costanti.DIM && c.y < Costanti.DIM) {
             return g[c.x][c.y].mostraStato(c);
-        } throw new IndexOutOfBoundsException();
+        }
+        throw new IndexOutOfBoundsException();
     }
 
     private boolean spara(Coordinata c) {
@@ -87,7 +89,8 @@ public class Griglia {
     public boolean sconfitta() {
         for (RealNave aNavi : navi) {
             if (!aNavi.affondata()) return false;
-        } return true;
+        }
+        return true;
     }
 
 }
