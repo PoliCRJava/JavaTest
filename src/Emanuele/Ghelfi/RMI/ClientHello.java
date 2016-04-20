@@ -19,9 +19,6 @@ import java.util.Scanner;
 public class ClientHello {
     public static void main(String[] args) {
         try {
-            Context namingContext = new InitialContext();
-            System.setProperty("java.security.policy","client.policy");
-            System.setSecurityManager(new SecurityManager());
             System.out.println("Insert the host address");
             Scanner scanner = new Scanner(System.in);
             String host = scanner.next();
@@ -41,8 +38,6 @@ public class ClientHello {
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (NotBoundException e) {
-            e.printStackTrace();
-        } catch (NamingException e) {
             e.printStackTrace();
         }
 
