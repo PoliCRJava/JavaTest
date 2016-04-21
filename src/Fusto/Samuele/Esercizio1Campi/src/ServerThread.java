@@ -46,10 +46,8 @@ public class ServerThread implements  Runnable {
             System.out.println("Login effettuato.");
             boolean clientOnline=true;
 
-
             while (clientOnline){
                 switch (in.readLine()){
-
 
                     case "partita": {
                         Random rand=new Random();
@@ -95,13 +93,9 @@ public class ServerThread implements  Runnable {
                     case "fine":{
                         System.out.println("Client disconnesso.");
                         clientOnline=false;
-
                     }
-
                 }
-
             }
-
 
             out.close();
             in.close();
@@ -110,10 +104,5 @@ public class ServerThread implements  Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
-
-
     }
 }

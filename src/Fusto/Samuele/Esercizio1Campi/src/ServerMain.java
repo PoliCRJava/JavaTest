@@ -13,21 +13,14 @@ public class ServerMain {
     ArrayList<Giocatore> giocatori = new ArrayList<>();
     private int numberOfClient=0;
 
-
-
-
-
     public static void main(String[] args) throws IOException {
         ServerMain main = new ServerMain();
-
         main.run();
-
     }
 
     private void run() throws IOException {
         ArrayList<Socket> arrayOfSockets = new ArrayList<>();
         ServerSocket server = new ServerSocket(3000);
-
         ExecutorService executor = Executors.newCachedThreadPool();
 
         while (true){
@@ -76,9 +69,7 @@ public class ServerMain {
                         classifica.set(j + 1, gioc);
                     }
                 }
-
             }
-
         }
         return classifica;
     }
@@ -86,6 +77,4 @@ public class ServerMain {
     public int numberOfPlayers(){
         return numberOfClient;
     }
-
-
 }
