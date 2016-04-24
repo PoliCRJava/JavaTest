@@ -70,7 +70,9 @@ public class ClientHandler implements Runnable {
         }
     }
 
-
+    /**
+     * It generates random sequence of number and sends it to client.
+     */
     private void StartGame() {
         boolean correct = true;
         //note a single Random object is reused here
